@@ -8,7 +8,8 @@
       "outputs": [".next/**", "!.next/cache/**", "!.next/dev/**", "dist/**"]
     },
     "check-types": {
-      "dependsOn": ["^check-types"]
+      "dependsOn": ["^check-types"],
+      "env": ["DIRECT_URL"]
     },
     "dev": {
       "cache": false,
