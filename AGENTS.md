@@ -18,6 +18,13 @@ This block is written and re-added by `turbo` before repository-scoped commands 
 - Do not silently change product scope in code. Update the PRD when product direction or foundational requirements change.
 - Use Ponytail throughout implementation and review.
 
+# Mandatory Git delivery workflow
+
+- Never push commits directly to `main`.
+- Create a dedicated branch for every repository change.
+- Push only the feature branch and open a pull request targeting `main`.
+- Do not merge the pull request without the user's explicit approval.
+
 # Mandatory UI component and Playwright rules
 
 These rules supplement the Spec Kit and Ponytail requirements in this repository.

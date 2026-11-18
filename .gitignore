@@ -46,6 +46,7 @@ yarn-error.log*
 /docs/
 /.specify/
 /specs/
+/skills-lock.json
 *.avif
 *.gif
 *.ico
