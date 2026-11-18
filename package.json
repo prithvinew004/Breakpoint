@@ -1,0 +1,36 @@
+{
+  "name": "breakpoint",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "format": "biome format --write apps packages .github package.json turbo.json biome.json vitest.config.ts",
+    "format:check": "biome format apps packages .github package.json turbo.json biome.json vitest.config.ts",
+    "lint": "biome lint apps packages .github vitest.config.ts",
+    "check-types": "turbo run check-types",
+    "test": "vitest run",
+    "test:e2e": "bun run --cwd apps/scanner test:e2e",
+    "playwright:install": "bun run --cwd apps/scanner browser:install"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.6.8",
+    "turbo": "2.11.12",
+    "typescript": "7.0.2",
+    "vitest": "5.1.0"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "bun",
+      "version": "1.4.4"
+    }
+  },
+  "packageManager": "bun@1.4.4",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
+}

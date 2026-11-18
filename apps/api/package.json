@@ -1,0 +1,20 @@
+{
+  "name": "@breakpoint/api",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "bun --watch src/index.ts",
+    "build": "bun build src/index.ts --outdir dist --target bun",
+    "check-types": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@repo/shared": "workspace:*",
+    "elysia": "1.4.32"
+  },
+  "devDependencies": {
+    "@repo/config": "workspace:*",
+    "@types/node": "26.6.6",
+    "typescript": "7.0.2"
+  }
+}

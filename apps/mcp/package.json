@@ -1,0 +1,13 @@
+{
+  "name": "@breakpoint/mcp",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check-types": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@repo/config": "workspace:*",
+    "typescript": "7.0.2"
+  }
+}
