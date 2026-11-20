@@ -3,7 +3,6 @@ import {
   apiEnvironmentSchema,
   browserSupabaseEnvironmentSchema,
   parseEnvironment,
-  serverSupabaseEnvironmentSchema,
 } from "../src/env";
 
 describe("environment validation", () => {
@@ -34,25 +33,5 @@ describe("environment validation", () => {
         SUPABASE_PUBLISHABLE_KEY: "server-key",
       }),
     ).toThrow("NEXT_PUBLIC_SUPABASE_URL");
-  });
-
-  it("reports variable names without leaking invalid values", () => {
-    const secret = "secret-value-that-must-not-leak";
-
-    expect(() =>
-      parseEnvironment(serverSupabaseEnvironmentSchema, {
-        SUPABASE_URL: "not-a-url",
-        SUPABASE_PUBLISHABLE_KEY: secret,
-      }),
-    ).toThrow("SUPABASE_URL");
-
-    try {
-      parseEnvironment(serverSupabaseEnvironmentSchema, {
-        SUPABASE_URL: "not-a-url",
-        SUPABASE_PUBLISHABLE_KEY: secret,
-      });
-    } catch (error) {
-      expect(String(error)).not.toContain(secret);
-    }
   });
 });

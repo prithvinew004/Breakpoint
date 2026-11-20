@@ -3,6 +3,8 @@ name: Quality
 on:
   push:
   pull_request:
+  schedule:
+    - cron: "0 3 * * 1"
 
 permissions:
   contents: read
@@ -15,8 +17,6 @@ jobs:
   quality:
     runs-on: ubuntu-latest
     timeout-minutes: 20
-    env:
-      DIRECT_URL: postgresql://prisma:prisma@localhost:5432/postgres
     steps:
       - name: Check out repository
         uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
@@ -28,6 +28,9 @@ jobs:
 
       - name: Install locked dependencies
         run: bun ci
+
+      - name: Audit dependencies
+        run: bun run audit:dependencies
 
       - name: Check formatting
         run: bun run format:check

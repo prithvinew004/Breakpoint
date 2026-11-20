@@ -24,6 +24,6 @@ export default defineConfig({
     { name: "desktop-1440", use: { viewport: { width: 1440, height: 900 } } },
     { name: "desktop-1280", use: { viewport: { width: 1280, height: 800 } } },
     { name: "mobile-390", use: { viewport: { width: 390, height: 844 } } },
-    { name: "mobile-393", use: { viewport: { width: 393, height: 852 } } },
+    { name: "tablet-768", use: { viewport: { width: 768, height: 1024 } } },
   ],
 });

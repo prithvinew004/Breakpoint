@@ -12,11 +12,6 @@ export const browserSupabaseEnvironmentSchema = z.object({
   NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY: publishableKey,
 });
 
-export const serverSupabaseEnvironmentSchema = z.object({
-  SUPABASE_URL: httpUrl,
-  SUPABASE_PUBLISHABLE_KEY: publishableKey,
-});
-
 export function parseEnvironment<Schema extends z.ZodType>(
   schema: Schema,
   input: unknown,

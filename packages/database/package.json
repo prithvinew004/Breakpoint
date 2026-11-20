@@ -7,21 +7,10 @@
     ".": "./src/index.ts"
   },
   "scripts": {
-    "check-types": "prisma validate --config prisma7.config.ts && prisma generate --config prisma7.config.ts && tsc --noEmit",
-    "prisma:generate": "prisma generate --config prisma7.config.ts",
-    "prisma:validate": "prisma validate --config prisma7.config.ts"
-  },
-  "dependencies": {
-    "@prisma/adapter-pg": "7.10.1",
-    "@prisma/client": "7.10.1",
-    "@repo/shared": "workspace:*",
-    "@supabase/supabase-js": "2.119.0",
-    "pg": "8.23.1"
+    "check-types": "tsc --noEmit"
   },
   "devDependencies": {
     "@repo/config": "workspace:*",
-    "@types/pg": "8.23.1",
-    "prisma": "7.10.1",
     "typescript": "7.0.2"
   }
 }
