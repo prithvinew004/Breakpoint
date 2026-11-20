@@ -5,15 +5,15 @@ export default defineConfig({
     projects: [
       {
         test: {
-          name: "shared",
-          root: "./packages/shared",
+          name: "dependency-audit-policy",
+          root: "./scripts",
           include: ["test/**/*.test.ts"],
         },
       },
       {
         test: {
-          name: "database",
-          root: "./packages/database",
+          name: "shared",
+          root: "./packages/shared",
           include: ["test/**/*.test.ts"],
         },
       },

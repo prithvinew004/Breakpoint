@@ -9,10 +9,6 @@
   "scripts": {
     "check-types": "tsc --noEmit"
   },
-  "dependencies": {
-    "@repo/shared": "workspace:*",
-    "@supabase/supabase-js": "2.119.0"
-  },
   "devDependencies": {
     "@repo/config": "workspace:*",
     "typescript": "7.0.2"
